@@ -1,8 +1,9 @@
 using System;
-using IndexTankClient.API.Client;
+using IndexTank.API.Client;
 
 namespace IndexTank.API.Client {
 
+	[Serializable]
     public class UnexpectedCodeException : HttpCodeException {
 
         public UnexpectedCodeException(HttpCodeException pSource) {

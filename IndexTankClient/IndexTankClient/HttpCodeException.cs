@@ -4,7 +4,8 @@ using System.Web;
 using System.Linq;
 using System.Text;
 
-namespace IndexTankClient.API.Client {
+namespace IndexTank.API.Client {
+	[Serializable]
     public class HttpCodeException : HttpException {
         // Marker class
     }
