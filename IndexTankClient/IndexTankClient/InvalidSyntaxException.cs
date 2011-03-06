@@ -1,12 +1,14 @@
 using System;
 using IndexTank.API.Client;
+using Microsoft.ServiceModel.Web;
+using System.Net;
 
 namespace IndexTank.API.Client {
 
 	[Serializable]
-    public class InvalidSyntaxException : Exception {
+	public class InvalidSyntaxException : WebProtocolException {
 
-        public InvalidSyntaxException(HttpCodeException pSource) : base(pSource.Message) {
+        public InvalidSyntaxException(HttpStatusCode pCode) : base(pCode) {
             // Marker class
         }
     }
